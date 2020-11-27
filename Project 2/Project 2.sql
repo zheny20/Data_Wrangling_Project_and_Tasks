@@ -2,7 +2,7 @@ select COUNT(tri_patientid),tri_name from Conditions
 group by tri_name
 having COUNT(tri_patientid)>100
 
-2. What is average height of both an inpatient and an outpatient where patient¡¯s age is over 65
+2. What is average height of both an inpatient and an outpatient where patientÂ¡Â¯s age is over 65
 select avg(MEAS_VALUE) from Flowsheets
 inner join
 (select NEW_PAT_ENC_CSN_ID,DOB_CATEGORY from Inpatient
