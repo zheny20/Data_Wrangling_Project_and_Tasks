@@ -63,7 +63,6 @@ change_status <- newtable %>%
 change_data <- change_data %>% group_by(ID) %>% mutate(count = row_number())
 
 library(RODBC) ##connect using ODBC driver to retrieve datasets
-myconn<-odbcConnect("dartmouth","zyu","zyu@qbs181")
 ques1c<-sqlQuery(myconn,"select * from Demographics")
 ## First I import Text, Conditions table and 
 ## merge them with Demographics table from question1 
